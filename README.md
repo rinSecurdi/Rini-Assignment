@@ -1,6 +1,19 @@
 # Rini's Kubernetes App
 
-## Steps Taken
+This project sets up a simple Kubernetes application stack with:
+- **Flask API** (Python)
+- **MySQL** (as backend database)
+- **Nginx** (as reverse proxy frontend)
+
+## 📁 Components
+
+- `Dockerfile`: Flask app container
+- `flask-deployment.yaml`: Deployment + Service for Flask
+- `mysql-deployment.yaml`: MySQL Deployment + Service
+- `nginx-deployment.yaml`: Nginx Deployment + Service
+- `mysql-secret.yaml`: Kubernetes Secret for DB credentials
+
+## Steps Taken to Deploy on Minikube
 1. Set up Minikube
 2. Deployed MySQL with Secrets
 3. Deployed Flask backend (Dockerized)
@@ -14,7 +27,7 @@
 - `frontend/`: Nginx config & HTML
 - `screenshots/`: Evidence of running app
 
-## How to Apply Kubernetes
+## How to Apply
 ```bash
 minikube start
 kubectl apply -f db/
